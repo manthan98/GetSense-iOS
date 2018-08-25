@@ -23,9 +23,10 @@ class DashboardViewController: UIViewController, UIWebViewDelegate {
     }
     
     private func showLiveStream() {
-        guard let url = URL(string: streamURL) else { return }
-        let urlRequest = URLRequest(url: url)
-        self.webView.loadRequest(urlRequest)
+        if let url = URL(string: streamURL) {
+            let urlRequest = URLRequest(url: url)
+            self.webView.loadRequest(urlRequest)
+        }
     }
 
 }

@@ -16,6 +16,7 @@
 		826B677C2130F2A100F43CDF /* ImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826B677B2130F2A100F43CDF /* ImagesViewController.swift */; };
 		82F9B4372130FE4F007F5823 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9B4362130FE4F007F5823 /* ImageCell.swift */; };
 		82F9B4392130FF5A007F5823 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9B4382130FF5A007F5823 /* Image.swift */; };
+		82F9B43F21310834007F5823 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9B43E21310834007F5823 /* UIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		826B677B2130F2A100F43CDF /* ImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesViewController.swift; sourceTree = "<group>"; };
 		82F9B4362130FE4F007F5823 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		82F9B4382130FF5A007F5823 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		82F9B43E21310834007F5823 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		826B67652130EF3800F43CDF /* GetSense-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				82F9B43D21310821007F5823 /* Util */,
 				82F9B43C213104B2007F5823 /* Model */,
 				82F9B43B213104AE007F5823 /* View */,
 				82F9B43A213104A9007F5823 /* Controller */,
@@ -98,6 +101,14 @@
 				82F9B4382130FF5A007F5823 /* Image.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		82F9B43D21310821007F5823 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				82F9B43E21310834007F5823 /* UIImageView.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +184,7 @@
 			files = (
 				826B67692130EF3800F43CDF /* DashboardViewController.swift in Sources */,
 				82F9B4392130FF5A007F5823 /* Image.swift in Sources */,
+				82F9B43F21310834007F5823 /* UIImageView.swift in Sources */,
 				826B67672130EF3800F43CDF /* AppDelegate.swift in Sources */,
 				826B677C2130F2A100F43CDF /* ImagesViewController.swift in Sources */,
 				826B676F2130EF3800F43CDF /* GetSense_iOS.xcdatamodeld in Sources */,
