@@ -32,6 +32,14 @@ class FirebaseService {
                         } else {
                             guard let url = url else { return }
                             print("Successfully uploaded image to Firebase storage: \(url)")
+                            
+                            // Push to API
+                            DataService.shared.postImage(imageURL: "\(url)", modelID: nil, conceptID: nil, completion: { (success) in
+                                if success {
+                                    print("YAY!")
+                                }
+                            })
+                            
                             completion(true)
                         }
                     })
