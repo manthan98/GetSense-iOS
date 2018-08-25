@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class ImagesViewController: UIViewController {
 
     @IBOutlet private weak var collectionView: UICollectionView!
     
-    var dataService = DataService.shared
+    var images = [Image]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,33 +21,42 @@ class ImagesViewController: UIViewController {
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         
-        self.dataService.delegate = self
-        
-        DataService.shared.getImages()
-    }
-
-}
-
-extension ImagesViewController: DataServiceDelegate {
-    func imagesLoaded() {
-        DispatchQueue.main.async {
+        FirebaseService.shared.databaseRef.observe(.value, with: { (snapshot) in
+            if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
+                for snap in snapshot {
+                    if let imageDict = snap.value as? [String:Any] {
+                        let key = snap.key
+                        guard let imageURL = imageDict["imageURL"] as? String else { return }
+                        let image = Image(withImageURL: imageURL, withImageKey: key)
+                        self.images.append(image)
+                    }
+                }
+            }
             self.collectionView.reloadData()
-        }
+        })
     }
+
 }
+
+//extension ImagesViewController: DataServiceDelegate {
+//    func imagesLoaded() {
+//        DispatchQueue.main.async {
+//            self.collectionView.reloadData()
+//        }
+//    }
+//}
 
 extension ImagesViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as? ImageCell {
-            cell.configureCell(withImage: dataService.images[indexPath.row])
+            cell.configureCell(withImage: images[indexPath.row])
             return cell
         }
-        
         return UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataService.images.count
+        return images.count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {

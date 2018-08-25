@@ -24,30 +24,30 @@ class DataService {
     
     var images = [Image]()
     
-    func getImages() {
-        let sessionConfig = URLSessionConfiguration.default
-        let session = URLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
-        
-        guard let url = URL(string: GET_URL) else { return }
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        
-        let task = session.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
-            if error == nil {
-                let statusCode = (response as! HTTPURLResponse).statusCode
-                print("URL session task completed: \(statusCode)")
-                
-                if let data = data {
-                    self.images.append(Image.parseJSON(data: data))
-                    self.delegate?.imagesLoaded()
-                }
-            } else {
-                print("URL session task failed: \(error?.localizedDescription)")
-            }
-        }
-        task.resume()
-        session.finishTasksAndInvalidate()
-    }
+//    func getImages() {
+//        let sessionConfig = URLSessionConfiguration.default
+//        let session = URLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
+//        
+//        guard let url = URL(string: GET_URL) else { return }
+//        var request = URLRequest(url: url)
+//        request.httpMethod = "GET"
+//        
+//        let task = session.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
+//            if error == nil {
+//                let statusCode = (response as! HTTPURLResponse).statusCode
+//                print("URL session task completed: \(statusCode)")
+//                
+//                if let data = data {
+//                    self.images.append(Image.parseJSON(data: data))
+//                    self.delegate?.imagesLoaded()
+//                }
+//            } else {
+//                print("URL session task failed: \(error?.localizedDescription)")
+//            }
+//        }
+//        task.resume()
+//        session.finishTasksAndInvalidate()
+//    }
     
     func postImage(imageURL: String, modelID: String?, conceptID: String?, completion: @escaping (_ success: Bool) -> ()) {
         let json: [String:Any] = [
