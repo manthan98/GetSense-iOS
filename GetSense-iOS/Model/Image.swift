@@ -8,14 +8,19 @@
 
 import Foundation
 
-class Image {
-    
-    var imageURL = String()
-    var imageKey = String()
-    
-    init(withImageURL imageURL: String, withImageKey imageKey: String) {
-        self.imageURL = imageURL
-        self.imageKey = imageKey
-    }
-    
+struct Image {
+    let imageURL: String?
+    let imageKey: String?
 }
+
+//class Image {
+//
+//    var imageURL = String()
+//    var imageKey = String()
+//
+//    init(withImageURL imageURL: String, withImageKey imageKey: String) {
+//        self.imageURL = imageURL
+//        self.imageKey = imageKey
+//    }
+//
+//}

@@ -27,7 +27,7 @@ class ImagesViewController: UIViewController {
                     if let imageDict = snap.value as? [String:Any] {
                         let key = snap.key
                         guard let imageURL = imageDict["imageURL"] as? String else { return }
-                        let image = Image(withImageURL: imageURL, withImageKey: key)
+                        let image = Image(imageURL: imageURL, imageKey: key)
                         self.images.append(image)
                     }
                 }

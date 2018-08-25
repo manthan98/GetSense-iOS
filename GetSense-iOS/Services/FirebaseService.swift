@@ -25,7 +25,7 @@ class FirebaseService {
             
             self.storageRef.child("images/\(imageUID)").putData(imageData, metadata: metadata) { (metadata, error) in
                 if error != nil {
-                    // TODO:
+                    print("Unable to upload image to Firebase storage")
                 } else {
                    self.storageRef.child("images/\(imageUID)").downloadURL(completion: { (url, error) in
                         if error != nil {
@@ -38,12 +38,6 @@ class FirebaseService {
                             self.postToFirebase(imageURL: "\(url)")
                             
                             // Push to API
-//                            DataService.shared.postImage(imageURL: "\(url)", modelID: nil, conceptID: nil, completion: { (success) in
-//                                if success {
-//                                    print("YAY!")
-//                                }
-//                            })
-                            
                             DataService.shared.getImage(withImageURL: "\(url)", completion: { (success) in
                                 if success {
                                     print("YAY!")

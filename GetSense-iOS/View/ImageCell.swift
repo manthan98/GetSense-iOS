@@ -16,10 +16,8 @@ class ImageCell: UICollectionViewCell {
     func configureCell(withImage image: Image) {
         self.detailsLabel.text = "TEST"
         
-        if image.imageURL != nil {
-            self.imageView.imageFromServer(withURLString: image.imageURL)
-        } else {
-            // Show dummy image
+        if let imageURL = image.imageURL {
+            self.imageView.imageFromServer(withURLString: imageURL)
         }
     }
     
