@@ -29,11 +29,16 @@ class ImagesViewController: UIViewController {
 
 extension ImagesViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as? ImageCell {
+            cell.configureCell(withImage: dataService.images[indexPath.row])
+            return cell
+        }
+        
         return UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return dataService.images.count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {

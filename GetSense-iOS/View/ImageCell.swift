@@ -14,12 +14,12 @@ class ImageCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     
     func configureCell(withImage image: Image) {
-        self.detailsLabel.text = "TEST"
+        self.detailsLabel.text = image.score
         
         if image.imageURL != nil {
-            // Show the actual image.
+            self.imageView.imageFromServer(withURLString: image.imageURL)
         } else {
-            // Show dummy image.
+            // Show dummy image
         }
     }
     
