@@ -8,5 +8,6 @@ target 'GetSense-iOS' do
   # Pods for GetSense-iOS
   pod 'Firebase/Core'
   pod 'Firebase/Storage'
+  pod 'Firebase/Database'
 
 end

@@ -61,10 +61,7 @@ extension DashboardViewController: UIImagePickerControllerDelegate, UINavigation
                 if success {
                     self.dismiss(animated: true, completion: nil)
                 } else {
-                    let alertController = UIAlertController(title: "Error", message: "Upload failure", preferredStyle: .alert)
-                    let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-                    alertController.addAction(okAction)
-                    self.present(alertController, animated: true, completion: nil)
+                    print("An unknown error occurred")
                 }
             }
         }

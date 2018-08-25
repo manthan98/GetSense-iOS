@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0EFA0870DA1789E2FF655AF65B378214"
+               BlueprintIdentifier = "07690124C0C7409EF8507949C3462579"
                BuildableName = "Pods_GetSense_iOS.framework"
                BlueprintName = "Pods-GetSense-iOS"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0EFA0870DA1789E2FF655AF65B378214"
+            BlueprintIdentifier = "07690124C0C7409EF8507949C3462579"
             BuildableName = "Pods_GetSense_iOS.framework"
             BlueprintName = "Pods-GetSense-iOS"
             ReferencedContainer = "container:Pods.xcodeproj">
