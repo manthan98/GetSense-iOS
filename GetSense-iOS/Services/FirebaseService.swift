@@ -23,13 +23,11 @@ class FirebaseService {
             let metadata = StorageMetadata()
             metadata.contentType = "image/jpeg"
             
-            let testUpload = self.storageRef.child("images/\(imageUID)")
-            
-            testUpload.putData(imageData, metadata: metadata) { (metadata, error) in
+            self.storageRef.child("images/\(imageUID)").putData(imageData, metadata: metadata) { (metadata, error) in
                 if error != nil {
                     // TODO:
                 } else {
-                   testUpload.downloadURL(completion: { (url, error) in
+                   self.storageRef.child("images/\(imageUID)").downloadURL(completion: { (url, error) in
                         if error != nil {
                             print("Unable to upload image to Firebase storage")
                             completion(false)
