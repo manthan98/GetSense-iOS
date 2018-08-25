@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 import FirebaseStorage
 import Photos
 
@@ -14,9 +15,9 @@ class DashboardViewController: UIViewController, UIWebViewDelegate {
     
     @IBOutlet private weak var webView: UIWebView!
     
-    var imagePicker = UIImagePickerController()
+    var latestStream: Livestream?
     
-    let streamURL = "https://0808fbe2.ngrok.io"
+    var imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,25 +27,40 @@ class DashboardViewController: UIViewController, UIWebViewDelegate {
         
         self.webView.delegate = self
         
-        self.showLiveStream()
-        
         // Request photos authorization
         let photos = PHPhotoLibrary.authorizationStatus()
         if photos == .notDetermined {
             PHPhotoLibrary.requestAuthorization({status in
                 if status == .authorized {
-                    print("Great")
+                    print("Authorization succeeded")
                 } else {
                     print("Authorization failed")
                 }
             })
         }
+        
+        Database.database().reference().child("livestream").observe(.value, with: { (snapshot) in
+            if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
+                for snap in snapshot {
+                    if let livestreamDict = snap.value as? [String:Any] {
+                        let key = snap.key
+                        guard let url = livestreamDict["livestreamURL"] as? String else { return }
+                        let livestream = Livestream(livestreamKey: key, livestreamURL: url)
+                        self.latestStream = livestream
+                    }
+                }
+            }
+            self.showLiveStream()
+        })
     }
     
     private func showLiveStream() {
-        if let url = URL(string: streamURL) {
-            let urlRequest = URLRequest(url: url)
-            self.webView.loadRequest(urlRequest)
+        if let latestStream = latestStream {
+            if let streamURL = latestStream.livestreamURL {
+                guard let url = URL(string: streamURL) else { return }
+                let urlReqest = URLRequest(url: url)
+                self.webView.loadRequest(urlReqest)
+            }
         }
     }
     
