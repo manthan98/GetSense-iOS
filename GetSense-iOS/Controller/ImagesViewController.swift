@@ -38,14 +38,6 @@ class ImagesViewController: UIViewController {
 
 }
 
-//extension ImagesViewController: DataServiceDelegate {
-//    func imagesLoaded() {
-//        DispatchQueue.main.async {
-//            self.collectionView.reloadData()
-//        }
-//    }
-//}
-
 extension ImagesViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as? ImageCell {

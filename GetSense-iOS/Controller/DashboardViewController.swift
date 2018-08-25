@@ -16,7 +16,7 @@ class DashboardViewController: UIViewController, UIWebViewDelegate {
     
     var imagePicker = UIImagePickerController()
     
-    let streamURL = ""
+    let streamURL = "https://0808fbe2.ngrok.io"
     
     override func viewDidLoad() {
         super.viewDidLoad()

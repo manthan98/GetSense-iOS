@@ -33,7 +33,7 @@ class FirebaseService {
                             completion(false)
                         } else {
                             guard let url = url else { return }
-                            print("Successfully uploaded image to Firebase storage: \(url)")
+                            print("Successfully uploaded image to Firebase storage")
                             
                             self.postToFirebase(imageURL: "\(url)")
                             
@@ -43,6 +43,12 @@ class FirebaseService {
 //                                    print("YAY!")
 //                                }
 //                            })
+                            
+                            DataService.shared.getImage(withImageURL: "\(url)", completion: { (success) in
+                                if success {
+                                    print("YAY!")
+                                }
+                            })
                             
                             completion(true)
                         }
