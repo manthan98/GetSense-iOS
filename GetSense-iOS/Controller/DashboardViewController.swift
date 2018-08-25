@@ -21,7 +21,7 @@ class DashboardViewController: UIViewController, UIWebViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.imagePicker.allowsEditing = false
+        self.imagePicker.allowsEditing = true
         self.imagePicker.delegate = self
         
         self.webView.delegate = self
@@ -56,20 +56,28 @@ class DashboardViewController: UIViewController, UIWebViewDelegate {
 
 extension DashboardViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage {
-            
-            if let uploadData = UIImageJPEGRepresentation(image, 0.2) {
-                FirebaseService.shared.storageRef.putData(uploadData, metadata: nil) { (metadata, error) in
+        
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            if let imageData = UIImageJPEGRepresentation(image, 0.2) {
+                let imageUID = NSUUID().uuidString
+                let metadata = StorageMetadata()
+                metadata.contentType = "image/jpeg"
+                
+                FirebaseService.shared.storageRef.child(imageUID).putData(imageData, metadata: metadata) { (metadata, error) in
                     if error != nil {
-                        print(error)
-                        return
+                        // TODO:
+                    } else {
+                        FirebaseService.shared.storageRef.downloadURL(completion: { (url, error) in
+                            if error != nil {
+                                print("Unable to upload image to Firebase storage")
+                            } else {
+                                print("Successfully uploaded image to Firebase storage: \(url!)")
+                            }
+                        })
                     }
                 }
             }
-            
         }
-        
-        dismiss(animated: true, completion: nil)
     }
 }
 
