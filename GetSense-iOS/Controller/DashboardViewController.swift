@@ -56,25 +56,15 @@ class DashboardViewController: UIViewController, UIWebViewDelegate {
 
 extension DashboardViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
-            if let imageData = UIImageJPEGRepresentation(image, 0.2) {
-                let imageUID = NSUUID().uuidString
-                let metadata = StorageMetadata()
-                metadata.contentType = "image/jpeg"
-                
-                FirebaseService.shared.storageRef.child(imageUID).putData(imageData, metadata: metadata) { (metadata, error) in
-                    if error != nil {
-                        // TODO:
-                    } else {
-                        FirebaseService.shared.storageRef.downloadURL(completion: { (url, error) in
-                            if error != nil {
-                                print("Unable to upload image to Firebase storage")
-                            } else {
-                                print("Successfully uploaded image to Firebase storage: \(url!)")
-                            }
-                        })
-                    }
+            FirebaseService.shared.uploadImage(withImage: image) { (success) in
+                if success {
+                    self.dismiss(animated: true, completion: nil)
+                } else {
+                    let alertController = UIAlertController(title: "Error", message: "Upload failure", preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    alertController.addAction(okAction)
+                    self.present(alertController, animated: true, completion: nil)
                 }
             }
         }
