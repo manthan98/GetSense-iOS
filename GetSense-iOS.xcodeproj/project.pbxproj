@@ -17,6 +17,7 @@
 		82F9B4372130FE4F007F5823 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9B4362130FE4F007F5823 /* ImageCell.swift */; };
 		82F9B4392130FF5A007F5823 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9B4382130FF5A007F5823 /* Image.swift */; };
 		82F9B43F21310834007F5823 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9B43E21310834007F5823 /* UIImageView.swift */; };
+		82F9B441213137EF007F5823 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9B440213137EF007F5823 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		82F9B4362130FE4F007F5823 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		82F9B4382130FF5A007F5823 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		82F9B43E21310834007F5823 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		82F9B440213137EF007F5823 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 		82F9B43D21310821007F5823 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				82F9B440213137EF007F5823 /* DataService.swift */,
 				82F9B43E21310834007F5823 /* UIImageView.swift */,
 			);
 			path = Util;
@@ -189,6 +192,7 @@
 				826B677C2130F2A100F43CDF /* ImagesViewController.swift in Sources */,
 				826B676F2130EF3800F43CDF /* GetSense_iOS.xcdatamodeld in Sources */,
 				82F9B4372130FE4F007F5823 /* ImageCell.swift in Sources */,
+				82F9B441213137EF007F5823 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

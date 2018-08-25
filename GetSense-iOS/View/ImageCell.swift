@@ -14,7 +14,7 @@ class ImageCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     
     func configureCell(withImage image: Image) {
-        self.detailsLabel.text = image.imageDesc
+        self.detailsLabel.text = "TEST"
         
         if image.imageURL != nil {
             // Show the actual image.

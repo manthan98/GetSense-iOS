@@ -10,7 +10,7 @@ import UIKit
 
 class DashboardViewController: UIViewController, UIWebViewDelegate {
     
-    @IBOutlet weak var webView: UIWebView!
+    @IBOutlet private weak var webView: UIWebView!
     
     let streamURL = ""
     

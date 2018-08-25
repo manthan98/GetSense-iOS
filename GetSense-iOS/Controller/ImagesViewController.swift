@@ -10,13 +10,19 @@ import UIKit
 
 class ImagesViewController: UIViewController {
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView!
+    
+    var dataService = DataService.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
+        
+        self.dataService.delegate = self
+        
+        DataService.shared.getImages()
     }
 
 }
@@ -27,7 +33,7 @@ extension ImagesViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return 1
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -36,5 +42,13 @@ extension ImagesViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 350, height: 250)
+    }
+}
+
+extension ImagesViewController: DataServiceDelegate {
+    func imageLoaded() {
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
     }
 }

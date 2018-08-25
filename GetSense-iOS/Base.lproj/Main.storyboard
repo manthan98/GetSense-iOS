@@ -95,20 +95,34 @@
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZS-4k-asz">
-                                <rect key="frame" x="0.0" y="44" width="375" height="685"/>
+                                <rect key="frame" x="0.0" y="164" width="375" height="565"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="565" id="1X7-76-r86"/>
+                                </constraints>
                             </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Livestream" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJD-tF-oUZ">
+                                <rect key="frame" x="62" y="87" width="251" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="ebx-9A-eha"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="hZS-4k-asz" firstAttribute="bottom" secondItem="RxI-FB-ang" secondAttribute="bottom" id="7da-fh-nvv"/>
-                            <constraint firstItem="hZS-4k-asz" firstAttribute="trailing" secondItem="RxI-FB-ang" secondAttribute="trailing" id="DMv-nM-78Q"/>
-                            <constraint firstItem="hZS-4k-asz" firstAttribute="top" secondItem="RxI-FB-ang" secondAttribute="top" id="Pp5-fX-BYS"/>
+                            <constraint firstItem="RxI-FB-ang" firstAttribute="trailing" secondItem="hJD-tF-oUZ" secondAttribute="trailing" constant="62" id="0I2-Ig-e5X"/>
+                            <constraint firstItem="hZS-4k-asz" firstAttribute="leading" secondItem="RxI-FB-ang" secondAttribute="leading" id="B0P-RF-cKc"/>
+                            <constraint firstItem="hJD-tF-oUZ" firstAttribute="leading" secondItem="RxI-FB-ang" secondAttribute="leading" constant="62" id="CJd-tq-29l"/>
+                            <constraint firstItem="hZS-4k-asz" firstAttribute="trailing" secondItem="RxI-FB-ang" secondAttribute="trailing" id="EB6-85-B4K"/>
+                            <constraint firstItem="hZS-4k-asz" firstAttribute="bottom" secondItem="RxI-FB-ang" secondAttribute="bottom" id="Toj-lv-Zpe"/>
                             <constraint firstItem="aKF-qg-Ux5" firstAttribute="bottom" secondItem="RxI-FB-ang" secondAttribute="bottom" id="Zvp-h2-T0y"/>
-                            <constraint firstItem="hZS-4k-asz" firstAttribute="leading" secondItem="RxI-FB-ang" secondAttribute="leading" id="c3q-oy-oQB"/>
                             <constraint firstItem="aKF-qg-Ux5" firstAttribute="trailing" secondItem="RxI-FB-ang" secondAttribute="trailing" id="fj6-Q6-PNn"/>
                             <constraint firstItem="aKF-qg-Ux5" firstAttribute="top" secondItem="RxI-FB-ang" secondAttribute="top" id="lMq-D6-PhW"/>
                             <constraint firstItem="aKF-qg-Ux5" firstAttribute="leading" secondItem="RxI-FB-ang" secondAttribute="leading" id="qi9-FG-rYM"/>
+                            <constraint firstItem="hJD-tF-oUZ" firstAttribute="top" secondItem="RxI-FB-ang" secondAttribute="top" constant="43" id="yfC-pF-Osx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RxI-FB-ang"/>
                     </view>
@@ -119,7 +133,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GGx-5M-VLc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-940" y="-315.29235382308849"/>
+            <point key="canvasLocation" x="-940" y="-315.51724137931035"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="keP-Wb-ZKh">
