@@ -7,19 +7,38 @@
 //
 
 import UIKit
+import FirebaseStorage
+import Photos
 
 class DashboardViewController: UIViewController, UIWebViewDelegate {
     
     @IBOutlet private weak var webView: UIWebView!
+    
+    var imagePicker = UIImagePickerController()
     
     let streamURL = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.imagePicker.allowsEditing = false
+        self.imagePicker.delegate = self
+        
         self.webView.delegate = self
         
         self.showLiveStream()
+        
+        // Request photos authorization
+        let photos = PHPhotoLibrary.authorizationStatus()
+        if photos == .notDetermined {
+            PHPhotoLibrary.requestAuthorization({status in
+                if status == .authorized {
+                    print("Great")
+                } else {
+                    print("Authorization failed")
+                }
+            })
+        }
     }
     
     private func showLiveStream() {
@@ -28,6 +47,29 @@ class DashboardViewController: UIViewController, UIWebViewDelegate {
             self.webView.loadRequest(urlRequest)
         }
     }
+    
+    @IBAction func addImage(_ sender: UIBarButtonItem) {
+        self.present(self.imagePicker, animated: true, completion: nil)
+    }
+    
+}
 
+extension DashboardViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage {
+            
+            if let uploadData = UIImageJPEGRepresentation(image, 0.2) {
+                FirebaseService.shared.storageRef.putData(uploadData, metadata: nil) { (metadata, error) in
+                    if error != nil {
+                        print(error)
+                        return
+                    }
+                }
+            }
+            
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
 }
 

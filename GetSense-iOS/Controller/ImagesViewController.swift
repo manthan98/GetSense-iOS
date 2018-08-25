@@ -27,6 +27,14 @@ class ImagesViewController: UIViewController {
 
 }
 
+extension ImagesViewController: DataServiceDelegate {
+    func imagesLoaded() {
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+    }
+}
+
 extension ImagesViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as? ImageCell {
@@ -47,13 +55,5 @@ extension ImagesViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 350, height: 250)
-    }
-}
-
-extension ImagesViewController: DataServiceDelegate {
-    func imageLoaded() {
-        DispatchQueue.main.async {
-            self.collectionView.reloadData()
-        }
     }
 }

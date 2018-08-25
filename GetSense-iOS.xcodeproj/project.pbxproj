@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		336C204D53A4C41E03367C8E /* Pods_GetSense_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62063AC7087C9DB3789062FF /* Pods_GetSense_iOS.framework */; };
 		826B67672130EF3800F43CDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826B67662130EF3800F43CDF /* AppDelegate.swift */; };
 		826B67692130EF3800F43CDF /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826B67682130EF3800F43CDF /* DashboardViewController.swift */; };
 		826B676C2130EF3800F43CDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 826B676A2130EF3800F43CDF /* Main.storyboard */; };
@@ -14,13 +15,16 @@
 		826B67712130EF3900F43CDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 826B67702130EF3900F43CDF /* Assets.xcassets */; };
 		826B67742130EF3900F43CDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 826B67722130EF3900F43CDF /* LaunchScreen.storyboard */; };
 		826B677C2130F2A100F43CDF /* ImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826B677B2130F2A100F43CDF /* ImagesViewController.swift */; };
+		8270B1CE21314AFE001B30A1 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270B1CD21314AFE001B30A1 /* FirebaseService.swift */; };
 		82F9B4372130FE4F007F5823 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9B4362130FE4F007F5823 /* ImageCell.swift */; };
 		82F9B4392130FF5A007F5823 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9B4382130FF5A007F5823 /* Image.swift */; };
 		82F9B43F21310834007F5823 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9B43E21310834007F5823 /* UIImageView.swift */; };
 		82F9B441213137EF007F5823 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9B440213137EF007F5823 /* DataService.swift */; };
+		82F9B443213147D5007F5823 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82F9B442213147D5007F5823 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		62063AC7087C9DB3789062FF /* Pods_GetSense_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetSense_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		826B67632130EF3800F43CDF /* GetSense-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GetSense-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		826B67662130EF3800F43CDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		826B67682130EF3800F43CDF /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -30,10 +34,14 @@
 		826B67732130EF3900F43CDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		826B67752130EF3900F43CDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		826B677B2130F2A100F43CDF /* ImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesViewController.swift; sourceTree = "<group>"; };
+		8270B1CD21314AFE001B30A1 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		82F9B4362130FE4F007F5823 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		82F9B4382130FF5A007F5823 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		82F9B43E21310834007F5823 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		82F9B440213137EF007F5823 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		82F9B442213147D5007F5823 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EB1D921B8A40821623489607 /* Pods-GetSense-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetSense-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GetSense-iOS/Pods-GetSense-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		F6909E919E89DC2950E73E58 /* Pods-GetSense-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetSense-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-GetSense-iOS/Pods-GetSense-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +49,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				336C204D53A4C41E03367C8E /* Pods_GetSense_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53D32A436BB83E53F8458A48 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB1D921B8A40821623489607 /* Pods-GetSense-iOS.debug.xcconfig */,
+				F6909E919E89DC2950E73E58 /* Pods-GetSense-iOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		826B675A2130EF3800F43CDF = {
 			isa = PBXGroup;
 			children = (
 				826B67652130EF3800F43CDF /* GetSense-iOS */,
 				826B67642130EF3800F43CDF /* Products */,
+				53D32A436BB83E53F8458A48 /* Pods */,
+				B302F40922749D2EBE66DDA5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				82F9B43D21310821007F5823 /* Util */,
+				8270B1CC213148A5001B30A1 /* Services */,
 				82F9B43C213104B2007F5823 /* Model */,
 				82F9B43B213104AE007F5823 /* View */,
 				82F9B43A213104A9007F5823 /* Controller */,
@@ -75,9 +96,19 @@
 				826B67702130EF3900F43CDF /* Assets.xcassets */,
 				826B67722130EF3900F43CDF /* LaunchScreen.storyboard */,
 				826B67752130EF3900F43CDF /* Info.plist */,
+				82F9B442213147D5007F5823 /* GoogleService-Info.plist */,
 				826B676D2130EF3800F43CDF /* GetSense_iOS.xcdatamodeld */,
 			);
 			path = "GetSense-iOS";
+			sourceTree = "<group>";
+		};
+		8270B1CC213148A5001B30A1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				82F9B440213137EF007F5823 /* DataService.swift */,
+				8270B1CD21314AFE001B30A1 /* FirebaseService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		82F9B43A213104A9007F5823 /* Controller */ = {
@@ -108,10 +139,17 @@
 		82F9B43D21310821007F5823 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				82F9B440213137EF007F5823 /* DataService.swift */,
 				82F9B43E21310834007F5823 /* UIImageView.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		B302F40922749D2EBE66DDA5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				62063AC7087C9DB3789062FF /* Pods_GetSense_iOS.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,9 +159,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 826B67782130EF3900F43CDF /* Build configuration list for PBXNativeTarget "GetSense-iOS" */;
 			buildPhases = (
+				D8CF7DA6C9D9BC5A099B097D /* [CP] Check Pods Manifest.lock */,
 				826B675F2130EF3800F43CDF /* Sources */,
 				826B67602130EF3800F43CDF /* Frameworks */,
 				826B67612130EF3800F43CDF /* Resources */,
+				11DCC4A0B44B05234742C70A /* [CP] Embed Pods Frameworks */,
+				41B58BB42687879206B2310F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -173,12 +214,71 @@
 			buildActionMask = 2147483647;
 			files = (
 				826B67742130EF3900F43CDF /* LaunchScreen.storyboard in Resources */,
+				82F9B443213147D5007F5823 /* GoogleService-Info.plist in Resources */,
 				826B67712130EF3900F43CDF /* Assets.xcassets in Resources */,
 				826B676C2130EF3800F43CDF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11DCC4A0B44B05234742C70A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GetSense-iOS/Pods-GetSense-iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GetSense-iOS/Pods-GetSense-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41B58BB42687879206B2310F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GetSense-iOS/Pods-GetSense-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8CF7DA6C9D9BC5A099B097D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GetSense-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		826B675F2130EF3800F43CDF /* Sources */ = {
@@ -189,6 +289,7 @@
 				82F9B4392130FF5A007F5823 /* Image.swift in Sources */,
 				82F9B43F21310834007F5823 /* UIImageView.swift in Sources */,
 				826B67672130EF3800F43CDF /* AppDelegate.swift in Sources */,
+				8270B1CE21314AFE001B30A1 /* FirebaseService.swift in Sources */,
 				826B677C2130F2A100F43CDF /* ImagesViewController.swift in Sources */,
 				826B676F2130EF3800F43CDF /* GetSense_iOS.xcdatamodeld in Sources */,
 				82F9B4372130FE4F007F5823 /* ImageCell.swift in Sources */,
@@ -334,15 +435,13 @@
 		};
 		826B67792130EF3900F43CDF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB1D921B8A40821623489607 /* Pods-GetSense-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J9JKX35A2N;
 				INFOPLIST_FILE = "GetSense-iOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.manthanshah.GetSense-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -352,15 +451,13 @@
 		};
 		826B677A2130EF3900F43CDF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6909E919E89DC2950E73E58 /* Pods-GetSense-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J9JKX35A2N;
 				INFOPLIST_FILE = "GetSense-iOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.manthanshah.GetSense-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

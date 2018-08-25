@@ -14,7 +14,7 @@ class ImageCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     
     func configureCell(withImage image: Image) {
-        self.detailsLabel.text = image.score
+        self.detailsLabel.text = "TEST: \(image.score)"
         
         if image.imageURL != nil {
             self.imageView.imageFromServer(withURLString: image.imageURL)
