@@ -35,8 +35,7 @@ class FirebaseService {
                             guard let url = url else { return }
                             print("Successfully uploaded image to Firebase storage - \(url)")
                             
-                            let todayString = self.getTodayString()
-                            self.postToFirebase(withImageURL: "\(url)", withTimeStamp: todayString)
+                            self.postToFirebase(withImageURL: "\(url)", withTimeStamp: self.getTodayString())
                             
                             // Push to API
                             DataService.shared.getImage(withImageURL: "\(url)", completion: { (success) in
@@ -65,20 +64,20 @@ class FirebaseService {
     
     // MARK: - Utility function (should be moved)
     private func getTodayString() -> String{
-        
+
         let date = Date()
         let calender = Calendar.current
         let components = calender.dateComponents([.year,.month,.day,.hour,.minute,.second], from: date)
-        
+
         let year = components.year
         let month = components.month
         let day = components.day
         let hour = components.hour
         let minute = components.minute
         let second = components.second
-        
+
         let today_string = String(year!) + "-" + String(month!) + "-" + String(day!) + " " + String(hour!)  + ":" + String(minute!) + ":" +  String(second!)
-        
+
         return today_string
     }
     
