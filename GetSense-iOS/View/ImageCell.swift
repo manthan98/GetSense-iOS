@@ -20,8 +20,8 @@ class ImageCell: UICollectionViewCell {
     }
     
     func configureCell(withImage image: Image) {
-        if let imageKey = image.imageKey {
-            self.detailsLabel.text = imageKey
+        if let timeStamp = image.timeStamp {
+            self.detailsLabel.text = timeStamp
         }
         
         if let imageURL = image.imageURL {

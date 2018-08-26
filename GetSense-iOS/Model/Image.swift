@@ -11,4 +11,5 @@ import Foundation
 struct Image {
     let imageURL: String?
     let imageKey: String?
+    let timeStamp: String?
 }
