@@ -10,6 +10,8 @@ import UIKit
 
 class PiViewController: UIViewController {
 
+    @IBOutlet weak var webView: UIWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

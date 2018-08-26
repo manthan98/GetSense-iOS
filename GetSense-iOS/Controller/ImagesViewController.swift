@@ -23,6 +23,7 @@ class ImagesViewController: UIViewController {
         
         FirebaseService.shared.databaseRef.observe(.value, with: { (snapshot) in
             if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
+                self.images.removeAll()
                 for snap in snapshot {
                     if let imageDict = snap.value as? [String:Any] {
                         let key = snap.key
