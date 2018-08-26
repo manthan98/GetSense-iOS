@@ -38,11 +38,11 @@ class FirebaseService {
                             self.postToFirebase(withImageURL: "\(url)", withTimeStamp: self.getTodayString())
                             
                             // Push to API
-                            DataService.shared.getImage(withImageURL: "\(url)", completion: { (success) in
-                                if success {
-                                    print("Successfully pushed to API service")
-                                }
-                            })
+//                            DataService.shared.getImage(withImageURL: "\(url)", completion: { (success) in
+//                                if success {
+//                                    print("Successfully pushed to API service")
+//                                }
+//                            })
                             
                             completion(true)
                         }

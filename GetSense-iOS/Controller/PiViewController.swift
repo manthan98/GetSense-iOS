@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseDatabase
 
-class PiViewController: UIViewController {
+class PiViewController: UIViewController, UIWebViewDelegate {
     
     var latestStream: PiStream?
 
@@ -17,6 +17,8 @@ class PiViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.webView.delegate = self
 
         Database.database().reference().child("pistream").observe(.value, with: { (snapshot) in
             if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
