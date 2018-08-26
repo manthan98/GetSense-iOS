@@ -22,6 +22,7 @@
 		82F9B441213137EF007F5823 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9B440213137EF007F5823 /* DataService.swift */; };
 		82F9B443213147D5007F5823 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82F9B442213147D5007F5823 /* GoogleService-Info.plist */; };
 		82FB205421321A950070F1F4 /* Livestream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FB205321321A950070F1F4 /* Livestream.swift */; };
+		82FB20562132273D0070F1F4 /* PiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FB20552132273D0070F1F4 /* PiViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		82F9B440213137EF007F5823 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		82F9B442213147D5007F5823 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		82FB205321321A950070F1F4 /* Livestream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Livestream.swift; sourceTree = "<group>"; };
+		82FB20552132273D0070F1F4 /* PiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiViewController.swift; sourceTree = "<group>"; };
 		EB1D921B8A40821623489607 /* Pods-GetSense-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetSense-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GetSense-iOS/Pods-GetSense-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F6909E919E89DC2950E73E58 /* Pods-GetSense-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetSense-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-GetSense-iOS/Pods-GetSense-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				826B67682130EF3800F43CDF /* DashboardViewController.swift */,
+				82FB20552132273D0070F1F4 /* PiViewController.swift */,
 				826B677B2130F2A100F43CDF /* ImagesViewController.swift */,
 			);
 			path = Controller;
@@ -294,6 +297,7 @@
 				82F9B4392130FF5A007F5823 /* Image.swift in Sources */,
 				82F9B43F21310834007F5823 /* UIImageView.swift in Sources */,
 				826B67672130EF3800F43CDF /* AppDelegate.swift in Sources */,
+				82FB20562132273D0070F1F4 /* PiViewController.swift in Sources */,
 				8270B1CE21314AFE001B30A1 /* FirebaseService.swift in Sources */,
 				82FB205421321A950070F1F4 /* Livestream.swift in Sources */,
 				826B677C2130F2A100F43CDF /* ImagesViewController.swift in Sources */,
