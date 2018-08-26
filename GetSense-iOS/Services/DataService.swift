@@ -21,7 +21,8 @@ class DataService {
         let sessionConfig = URLSessionConfiguration.default
         let session = URLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
         
-        let testURL = "\(API_URL)?image_URL=\(imageURL)"
+        let temp = imageURL.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+        let testURL = "\(API_URL)?image_URL=\(temp!)"
         
         guard let url = URL(string: testURL) else { return }
         var request = URLRequest(url: url)
