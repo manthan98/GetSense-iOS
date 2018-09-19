@@ -1,6 +1,6 @@
 # GetSense-iOS
 
-Hack The 6ix - Best Security Hack.
+Hack The 6ix - Best Security Hack, Best Use of Clarifai API.
 
 ## What it does
 GetSense is an AI powered flexible security solution that uses low-level IoT devices (laptop camera systems or Raspberry Pi) to detect, classify, and identify strangers and friends in your circle. A GetSense owner uploads images of authorized faces through an user-facing mobile application. Through this iOS application, the user has access to a live-stream of all connected camera devices, and authorized friend list.
